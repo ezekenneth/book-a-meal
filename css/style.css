@@ -1,0 +1,19 @@
+
+div.container-fluid.search {
+    margin-top: auto;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 10%;
+    padding-bottom: 5%;
+    background-image: url("searchbg.webp");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    text-align: center;
+}
+div.container.mb-4.registerbuton {
+text-align: right;
+}
+
+

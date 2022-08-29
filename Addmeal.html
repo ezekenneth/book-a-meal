@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Meal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<link rel="stylesheet" href="css/Addmeal.css"/>
+</head>
+<body class=" bg-white">
+    <div class="main-container d-flex">
+        <div class="sidebar" id="side_nav">
+            <div class="head-box pb-4 pt-3 px-3 d-flex justify-content-between">
+                <h1 class="fs-5"><span class="bg-white text-dark rounded shadow  px-2 pe-2">BM</span> <span class="text-white ms-auto">Book a Meal</span></h1>
+                 <button class="btn close-btn d-md-none d-block px-1 py-0 text-white"><i class="fa fa-bars"></i> </button>
+            </div>
+            <ul class="list-unstyled px-2 ">
+              <li class=""><a href="Admin.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa fa-home pe-2" aria-hidden="true"></i>Dashboard</a></li>
+              <li class=""><a href="adminprofile.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa fa-user pe-2" aria-hidden="true"></i>Profile</a></li>
+              <li class=""><a href="mealStore.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa fa-shopping-bag pe-2" aria-hidden="true"></i>Meal Store</a></li>
+              <li class="active"><a href="Addmeal.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa fa-plus pe-2" aria-hidden="true"></i>Add Meal</a></li>
+              <li class=""><a href="Customers.html" class="text-decoration-none  px-3 py-2 d-block"><i class="fa fa-users pe-2" aria-hidden="true"></i>customers</a></li>
+              <li class=""><a href="Orders.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa fa-shopping-cart pe-2" aria-hidden="true"></i>Orders</a></li>
+              <li class=""><a href="messages.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa fa-comments pe-2" aria-hidden="true"></i>messages</a></li> 
+
+          </ul>
+
+            <hr class="bg-white">
+
+            <ul class="list-unstyled px-2">
+                <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="fa fa-bell pe-2" aria-hidden="true"></i>Notification</a></li>
+                <li class=""><a href="#" class="text-decoration-none  px-3 py-2 d-block"><i class="fa fa-sign-out pe-2" aria-hidden="true"></i>logout</a></li>
+
+
+            </ul>
+
+        </div>
+        <div class="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <div class="d-flex justify-content-between d-md-none d-block">
+                        <a class="navbar-brand fs-4" href="#">Book a meal</a>
+                        <button class="btn px-1 py-0 open-btn"><i class="fa fa-bars" aria-hidden="true"></i>
+                        </button>
+
+                    </div>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <button class="btn ">
+                        <a class="nav-link"  href="adminprofile.html">profile</a>
+                        </button>
+                      </li>
+                      
+                      
+                        
+                  </div>
+                </div>
+            </nav>
+            <div class="container m-2">
+
+                <form action="">
+                
+                    
+                        
+                    
+                          <div class="container">
+                            <div class="row justify-content-center">
+                              <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                                <div class="card shadow-lg" style="border-radius: 2rem;">
+                                  <div class="card-body p-5 text-center">
+                      
+                                    <div class=" pb-3">
+                      
+                                      <h1 class="fw-bold mb-5">Add meal</h1>
+                      
+                                      
+                      
+                                      <div class="form-outline mb-4">
+                                        <label class="form-label fw-bold" for="typemealname">Meal Name</label>
+                                        <input type="text" placeholder="Enter Name" id="typemealname" class="form-control form-control-lg" />
+                                        
+                                      </div>
+                      
+                                      <div class="form-outline mb-4">
+                                        <label class="form-label fw-bold" for="typePrice">Price</label>
+                                        <input type="text" placeholder="Enter Amount" id="typeprice" class="form-control form-control-lg" />
+                                        
+                                      </div>
+
+                                      <div>
+                                        <label for="formimage" class="form-label fw-bold">Upload Image</label>
+                                        <input class="form-control form-control-lg mb-5" id="formimage" type="file">
+                                      </div>
+                      
+                                      <button class="btn btn-primary btn-lg btn-rounded gradient-custom text-white px-5" type="submit">Submit</button>
+                      
+                                    </div>
+                      
+                                
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        
+                      
+                </form>
+
+
+
+
+
+            </div>
+
+
+                
+
+
+        </div>
+
+    </div>
+    
+    
+
+
+
+    
+
+    <script>
+        
+
+        $('.sidebar ul li').on('click', function(){
+            $('.sidebar li.active').removeClass('active');
+            $(this).addClass('active')
+        })
+
+        $('.open-btn').on('click', function(){
+        $('.sidebar').addClass('active');
+        })
+
+        $('.close-btn').on('click', function(){
+        $('.sidebar').removeClass('active');
+        })
+
+        
+
+
+        
+    </script>
+</body>
+</html>

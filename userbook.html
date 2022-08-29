@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USER Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/user.css"/>
+</head>
+<body class=" bg-white">
+    <div class="main-container d-flex">
+        <div class="sidebar" id="side_nav">
+            <div class="head-box pb-4 pt-3 px-3 d-flex justify-content-between">
+                <h1 class="fs-5"><span class="bg-white text-dark rounded shadow  px-2 pe-2">BM</span> <span class="text-white ms-auto">Book a Meal</span></h1>
+                 <button class="btn close-btn d-md-none d-block px-1 py-0 text-white"><i class="fa fa-times"></i> </button>
+            </div>
+            <ul class="list-unstyled px-2 ">
+                <li class=""><a href="user.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa fa-home pe-2" aria-hidden="true"></i>Dashboard</a></li>
+                <li class=""><a href="userprofile.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa fa-user pe-2" aria-hidden="true"></i>profile</a></li>
+                <li class="active"><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="fa fa-shopping-bag pe-2" aria-hidden="true"></i>Book</a></li>
+                <li class=""><a href="userorders.html" class="text-decoration-none  px-3 py-2 d-block"><i class="fa fa-shopping-cart pe-2" aria-hidden="true"></i>My orders</a></li>
+                <li class=""><a href="userchat.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa fa-comments pe-2" aria-hidden="true"></i>support chat</a></li> 
+
+            </ul>
+
+            <hr class="bg-white">
+
+            <ul class="list-unstyled px-2">
+                
+                
+                <li class=""><a href="#" class="text-decoration-none  px-3 py-2 d-block"><i class="fa fa-sign-out pe-2" aria-hidden="true"></i>logout</a></li>
+
+
+            </ul>
+
+        </div>
+     <div class="content">
+        <div class="d-flex ">
+            <div class="d-flex justify-content- d-md-none d-block">
+                <h1 class="fs-5 mt-2 mx-2"><span class="bg-danger text-white rounded shadow  px-2 pe-2">BM</span> <span class="text-dark ms-auto">Book a Meal</span></h1>
+                <button class="btn mx-3 my-2 open-btn"><i class="fa fa-bars" aria-hidden="true"></i>
+                </button>
+                
+
+            </div>
+            <div class="ms-auto">
+
+                <div class="dropdown p-2">
+                    <button class="btn btn-danger dropdown-toggle d-flex" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-user px-2"></i>
+                    <h6>Eze kenneth</h6>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownmenuButton1">
+                    <li><a class="dropdown-item" href="userprofile.html">profile</a></li>
+                    
+                    </ul>
+                </div>
+            </div>
+      </div>
+
+
+            <!--food and drink list-->
+        <div class="container p-5">
+
+                <div class="input-group mb-3 px-5">
+                
+                <input type="text" class="form-control" placeholder="search for your favourite meal" id="search" aria-describedby="search">
+                <span class="input-group-text bg-danger" id="search"><button class="btn text-white">search</button></span>
+              </div>
+            <!--food list-->
+              <div class="container py-3 text-center p-5">
+                <h1 class="fw-bold"> Check out our delicious meal</h1>
+              </div>
+          
+            <div class="row mx-auto">
+                <div class="col-sm-6 col-md-3">
+                   <div class="card text-center m-1">
+                        <img src="jollofrice.jpeg" alt="jollofrice" class="rounded-pill mx-auto " height="70%" width="70%">
+                        <h5>Jollof Rice</h5>
+                        <p class="price"><strong>#600</strong></p>
+                        <p><button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#addtocart1">Add to cart</button></p>
+                   </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                   <div class="card text-center m-1">
+                        <img src="friedrice.gif" alt="friedrice" class="rounded-pill mx-auto " height="70%" width="70%">
+                        <h5>Fried Rice</h5>
+                        <p class="price"><strong>#600</strong></p>
+                        <p><button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#addtocart1">Add to cart</button></p>
+                   </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card text-center m-1">
+                        <img src="egusisoup.jpeg" alt="egusisoup" class="rounded-pill mx-auto " height="70%" width="70%">
+                        <h5>Egusi soup</h5>
+                        <p class="price"><strong>#800</strong></p>
+                        <p><button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#addtocart1">Add to cart</button></p>
+                   </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                   <div class="card text-center m-1">
+                        <img src="edikaikong.jpeg" alt="edikaikong" class="rounded-pill mx-auto " height="70%" width="70%">
+                        <h5>Edikaikong</h5>
+                        <p class="price"><strong>#800</strong></p>
+                        <p><button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#addtocart1">Add to cart</button></p>
+                   </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+
+                  <div class="card text-center m-1">
+                        <img src="moimoi.jpeg" alt="moimoi" class="rounded-pill mx-auto " height="70%" width="70%">
+                        <h5>Moi moi</h5>
+                        <p class="price"><strong>#400</strong></p>
+                        <p><button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#addtocart1">Add to cart</button></p>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-3 ">
+                    <div class="card text-center m-1">
+                        <img src="nkwobi.jpeg" alt="nkwobi" class="rounded-pill mx-auto " height="70%" width="70%">
+                        <h5>Nkwobi</h5>
+                        <p class="price"><strong>#2000</strong></p>
+                        <p><button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#addtocart1">Add to cart</button></p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 ">
+                    <div class="card text-center m-1">
+                        <img src="ofe-nsala.jpeg" alt="ofe-nsala" class="rounded-pill mx-auto " height="70%" width="70%">
+                        <h5>Ofe nsala</h5>
+                        <p class="price"><strong>#600</strong></p>
+                        <p><button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#addtocart1">Add to cart</button></p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card text-center m-1">
+                        <img src="Fried-Yam.jpeg" alt="Fried-Yam" class="rounded-pill mx-auto " height="70%" width="70%">
+                        <h5>Fried Yam</h5>
+                        <p class="price"><strong>#500</strong></p>
+                        <p><button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#addtocart1">Add to cart</button></p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card text-center m-1">
+                        <img src="Goat-meat-pepper-soup.jpeg" alt="Goat-meat-pepper-soup" class="rounded-pill mx-auto " height="70%" width="70%">
+                        <h5>Goat Meat pepper soup</h5>
+                        <p class="price"><strong>#1500</strong></p>
+                        <p><button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#addtocart1">Add to cart</button></p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card text-center m-1">
+                        <img src="supagheti.jpeg" alt="supagheti" class="rounded-pill mx-auto " height="70%" width="70%">
+                        <h5>supagheti</h5>
+                        <p class="price"><strong>#500</strong></p>
+                        <p><button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#addtocart1">Add to cart</button></p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card text-center m-1">
+                        <img src="ChickenSalad.jpeg" alt="ChickenSalad" class="rounded-pill mx-auto " height="70%" width="70%">
+                        <h5>Chicken salad</h5>
+                        <p class="price"><strong>#1500</strong></p>
+                        <p><button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#addtocart1">Add to cart</button></p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card text-center m-1">
+                        <img src="coconutrice.jpeg" alt="coconutrice" class="rounded-pill mx-auto " height="70%" width="70%">
+                        <h5>Coconut Rice</h5>
+                        <p class="price"><strong>#800</strong></p>
+                        <p><button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#addtocart1">Add to cart</button></p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card text-center m-1">
+                        <img src="5alive.jpeg" alt="5alive" class="rounded-pill mx-auto " height="70%" width="70%">
+                        <h5>5alive</h5>
+                        <p class="price"><strong>#800</strong></p>
+                        <p><button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#addtocart1">Add to cart</button></p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card text-center m-1">
+                        <img src="CHIVITA.jpeg" alt="CHIVITA" class="rounded-pill mx-auto " height="70%" width="70%">
+                        <h5>Chivita</h5>
+                        <p class="price"><strong>#800</strong></p>
+                        <p><button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#addtocart1">Add to cart</button></p>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            
+        </div>
+
+        <!--add to cart 1 modal start-->
+
+        <div class="modal fade " id="addtocart1" tabindex="-1" aria-labelledby="addtocartLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                    <div class="modal-header bg-light">
+                        <div class="ms-auto">
+                            <h5 class="fw-bold">Add into your cart</h5>
+                        </div>
+                        
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body ">
+                        <div class="card  p-2  bg-light shadow-sm">
+                            <div class=" d-flex mb-3 justify-content-between">
+                                <div class="pt-2 ps-2">
+                                    <img src="jollofrice.jpeg" alt="jollofrice" style="height: 60px;" class="rounded ">
+                                </div>
+                                    <div class="pt-3 pe-5">
+                                    
+                                        <h6 class="fw-bold pe-5">jollofrice</h6>
+                                        <h6 class="fw-bold pe-5">#600</h6>
+                                    </div>
+                                <div class=" pt-4">
+                                    
+                                    <div class="d-flex me-3 pt-4 ps-5">
+                                        <h6 class="fw-bold "> Total:</h6>
+                                        <h6 class="fw-bold ps-2  "> #600</h6>
+                                    </div>    
+                            </div>
+                            </div>
+
+                        </div>
+                        <div class="card bg-light p-4 shadow-sm">
+
+                        
+                            <div class="container-fluid row justify-content-center ">
+                                <label for="qtyofmeal" class="fw-bold mb-2">Quantity</label>
+                                <input type="number"class="form-control" id="qtyofmeal" min="1">
+                            </div>
+
+                            <div class="form mt-4">
+                                <label for="instructions" class="fw-bold">Aditional instructions:</label>
+                                <textarea class="form-control" placeholder="drop your instruction here" id="instructions" style="height: 100px"></textarea>
+                                
+                            </div>
+                       </div>
+                    </div>
+                    <div class="modal-footer border-0">   
+                            <button type="button" class="btn btn-danger">Add</button>
+                    </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        <!--add to cart modal end-->
+
+
+
+
+
+
+
+        
+
+    </div>
+    
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        
+
+        $('.sidebar ul li').on('click', function(){
+            $('.sidebar li.active').removeClass('active');
+            $(this).addClass('active')
+        })
+
+        $('.open-btn').on('click', function(){
+        $('.sidebar').addClass('active');
+        })
+
+        $('.close-btn').on('click', function(){
+        $('.sidebar').removeClass('active');
+        })
+
+        
+
+
+        $(document).ready(function(){
+          $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+        });
+    </script>
+</body>
+</html>

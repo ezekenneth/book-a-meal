@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<link rel="stylesheet" href="css/Admin.css"/>
+</head>
+<body class=" bg-white">
+    <div class="main-container d-flex">
+        <div class="sidebar" id="side_nav">
+            <div class="head-box pb-4 pt-3 px-3 d-flex justify-content-between">
+                <h1 class="fs-5"><span class="bg-white text-dark rounded shadow  px-2 pe-2">BM</span> <span class="text-white ms-auto">Book a Meal</span></h1>
+                 <button class="btn close-btn d-md-none d-block px-1 py-0 text-white"><i class="fa fa-bars"></i> </button>
+            </div>
+            <ul class="list-unstyled px-2 ">
+                <li class=""><a href="Admin.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa fa-home pe-2" aria-hidden="true"></i>Dashboard</a></li>
+                <li class=""><a href="adminprofile.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa fa-user pe-2" aria-hidden="true"></i>Profile</a></li>
+                <li class="active"><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="fa fa-shopping-bag pe-2" aria-hidden="true"></i>Meal Store</a></li>
+                <li class=""><a href="Addmeal.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa fa-plus pe-2" aria-hidden="true"></i>Add Meal</a></li>
+                <li class=""><a href="Customers.html" class="text-decoration-none  px-3 py-2 d-block"><i class="fa fa-users pe-2" aria-hidden="true"></i>customers</a></li>
+                <li class=""><a href="Orders.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa fa-shopping-cart pe-2" aria-hidden="true"></i>Orders</a></li>
+                <li class=""><a href="messages.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa fa-comments pe-2" aria-hidden="true"></i>messages</a></li> 
+
+            </ul>
+
+            <hr class="bg-white">
+
+            <ul class="list-unstyled px-2">
+
+                <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="fa fa-bell pe-2" aria-hidden="true"></i>Notification</a></li>
+                <li class=""><a href="#" class="text-decoration-none  px-3 py-2 d-block"><i class="fa fa-sign-out pe-2" aria-hidden="true"></i>logout</a></li>
+
+
+            </ul>
+
+        </div>
+        <div class="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <div class="d-flex justify-content-between d-md-none d-block">
+                        <a class="navbar-brand fs-4" href="#">Book a meal</a>
+                        <button class="btn px-1 py-0 open-btn"><i class="fa fa-bars" aria-hidden="true"></i>
+                        </button>
+
+                    </div>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <button class="btn ">
+                        <a class="nav-link"  href="adminprofile.html">profile</a>
+                        </button>
+                      </li>
+                      
+                        
+                  </div>
+                </div>
+              </nav>
+
+
+              <div class="container-fluid pb-4">
+                    <div class="container py-4 text-bold text-center fw-bold pt-3">
+                        <h3 class="fw-bold">Meal store</h3>
+                    </div>
+                
+        
+                    <div class="container p-4">
+                    <input class="form-control" id="myInput" type="text" placeholder="Search for food">
+                    </div>
+                <div class="container-fluid overflow-auto">
+                <table class="table table-bordered table-striped bg-white" id="mytable">
+                        <thead class="bg-dark text-white">
+                        <tr>
+                            <th>ID</th>
+                            <th>food Name</th>
+                            <th>price</th>
+                            <th>action</th>
+                            
+                        </tr>
+                        </thead>
+                    <tbody id="myTable">
+                        <tr>
+                            <td>
+                                <H6>1</H6> 
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <img src="jollofrice.jpeg" class="rounded-circle" alt="jollofrice" style="height: 50px;">
+                                    <h6 class="p-2">Jollof Rice</h6>
+                                </div>
+                            </td>
+                            <td>
+                                <p>600.00</p>   
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <div class="p-1"><button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#editmealstore1">Edit</button></div>
+        
+                                    <div class="p-1"><button class="btn btn-outline-danger">Delete</button></div>
+                                </div>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <H6>2</H6> 
+                            </td>
+                            <td>
+                                
+                                <div class="d-flex">
+                                    <img src="friedrice.gif" class="rounded-circle" alt="jollofrice" style="height: 50px;">
+                                    <h6 class="p-2">Fried Rice</h6>
+                                </div>
+                            </td>
+                            <td>
+                                <p>600.00</p>   
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <div class="p-1"><button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#editmealstore1">Edit</button></div>
+        
+                                    <div class="p-1"><button class="btn btn-outline-danger">Delete</button></div>
+                                </div>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <H6>3</H6> 
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <img src="egusisoup.jpeg" class="rounded-circle" alt="jollofrice" style="height: 50px;">
+                                    <h6 class="p-2">Egusi soup</h6>
+                                </div>
+                            </td>
+                            <td>
+                                <p>800.00</p>   
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <div class="p-1"><button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#editmealstore1">Edit</button></div>
+        
+                                    <div class="p-1"><button class="btn btn-outline-danger">Delete</button></div>
+                                </div>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <H6>4</H6> 
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <img src="edikaikong.jpeg" class="rounded-circle" alt="jollofrice" style="height: 50px;">
+                                    <h6 class="p-2">Edikaikong</h6>
+                                </div>
+                            </td>
+                            <td>
+                                <p>600.00</p>   
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <div class="p-1"><button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#editmealstore1">Edit</button></div>
+        
+                                    <div class="p-1"><button class="btn btn-outline-danger">Delete</button></div>
+                                </div>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <H6>5</H6> 
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <img src="moimoi.jpeg" class="rounded-circle" alt="jollofrice" style="height: 50px;">
+                                    <h6 class="p-2">Moi Moi</h6>
+                                </div>
+                            </td>
+                            <td>
+                                <p>400.00</p>   
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <div class="p-1"><button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#editmealstore1">Edit</button></div>
+        
+                                    <div class="p-1"><button class="btn btn-outline-danger">Delete</button></div>
+                                </div>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <H6>6</H6> 
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <img src="nkwobi.jpeg" class="rounded-circle" alt="jollofrice" style="height: 50px;">
+                                    <h6 class="p-2">Nkwobi</h6>
+                                </div>
+                            </td>
+                            <td>
+                                <p>2000.00</p>   
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <div class="p-1"><button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#editmealstore1">Edit</button></div>
+        
+                                    <div class="p-1"><button class="btn btn-outline-danger">Delete</button></div>
+                                </div>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <H6>7</H6> 
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <img src="ofe-nsala.jpeg" class="rounded-circle" alt="jollofrice" style="height: 50px;">
+                                    <h6 class="p-2">ofe-nsala</h6>
+                                </div>
+                            </td>
+                            <td>
+                                <p>600.00</p>   
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <div class="p-1"><button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#editmealstore1">Edit</button></div>
+        
+                                    <div class="p-1"><button class="btn btn-outline-danger">Delete</button></div>
+                                </div>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <H6>8</H6> 
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <img src="Fried-Yam.jpeg" class="rounded-circle" alt="jollofrice" style="height: 50px;">
+                                    <h6 class="p-2">Fried Yam</h6>
+                                </div>
+                            </td>
+                            <td>
+                                <p>500.00</p>   
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <div class="p-1"><button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#editmealstore1">Edit</button></div>
+        
+                                    <div class="p-1"><button class="btn btn-outline-danger">Delete</button></div>
+                                </div>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <H6>9</H6> 
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <img src="Goat-meat-pepper-soup.jpeg" class="rounded-circle" alt="jollofrice" style="height: 50px;">
+                                    <h6 class="p-2">Goat Meat Pepper Soup</h6>
+                                </div>
+                            </td>
+                            <td>
+                                <p>1500.00</p>   
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <div class="p-1"><button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#editmealstore1">Edit</button></div>
+        
+                                    <div class="p-1"><button class="btn btn-outline-danger">Delete</button></div>
+                                </div>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <H6>10</H6> 
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <img src="supagheti.jpeg" class="rounded-circle" alt="jollofrice" style="height: 50px;">
+                                    <h6 class="p-2">Supagheti</h6>
+                                </div>
+                            </td>
+                            <td>
+                                <p>500.00</p>   
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <div class="p-1"><button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#editmealstore1">Edit</button></div>
+        
+                                    <div class="p-1"><button class="btn btn-outline-danger">Delete</button></div>
+                                </div>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <H6>11</H6> 
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <img src="ChickenSalad.jpeg" class="rounded-circle" alt="jollofrice" style="height: 50px;">
+                                    <h6 class="p-2">Chicken salad</h6>
+                                </div>
+                            </td>
+                            <td>
+                                <p>1500.00</p>   
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <div class="p-1"><button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#editmealstore1">Edit</button></div>
+        
+                                    <div class="p-1"><button class="btn btn-outline-danger">Delete</button></div>
+                                </div>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <H6>12</H6> 
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <img src="coconutrice.jpeg" class="rounded-circle" alt="jollofrice" style="height: 50px;">
+                                    <h6 class="p-2">Jollof Rice</h6>
+                                </div>
+                            </td>
+                            <td>
+                                <p>800.00</p>   
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <div class="p-1"><button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#editmealstore1">Edit</button></div>
+        
+                                    <div class="p-1"><button class="btn btn-outline-danger">Delete</button></div>
+                                </div>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <H6>13</H6> 
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <img src="5alive.jpeg" class="rounded-circle" alt="jollofrice" style="height: 50px;">
+                                    <h6 class="p-2">5alive</h6>
+                                </div>
+                            </td>
+                            <td>
+                                <p>800.00</p>   
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <div class="p-1"><button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#editmealstore1">Edit</button></div>
+        
+                                    <div class="p-1"><button class="btn btn-outline-danger">Delete</button></div>
+                                </div>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <H6>14</H6> 
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <img src="CHIVITA.jpeg" class="rounded-circle" alt="jollofrice" style="height: 50px;">
+                                    <h6 class="p-2">5alive</h6>
+                                </div>
+                            </td>
+                            <td>
+                                <p>800.00</p>   
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <div class="p-1"><button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#editmealstore1">Edit</button></div>
+        
+                                    <div class="p-1"><button class="btn btn-outline-danger">Delete</button></div>
+                                </div>
+                            </td>
+                            
+                        </tr>
+                        
+                    
+                    </tbody>
+                </table>
+                    
+            </div>
+            <!--mealstore edit modal id 1 start-->
+            <div>
+                <div class="modal fade " id="editmealstore1" tabindex="-1" aria-labelledby="editpasswordLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header bg-light">
+                            <div class="ms-auto">
+                              <h4 class="modal-title fw-bold" id="editpasswordtitle">Edit Meal</h4>
+                           </div>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body ">
+                            <div class="card bg-light p-4 shadow-sm">
+                            
+                    
+                
+                                <div class="form-outline mb-4">
+                                  <label class="form-label fw-bold" for="typemealname">change Meal Name:</label>
+                                  <input type="text" placeholder="Enter meal Name" id="typemealname" class="form-control form-control-lg" />
+                                  
+                                </div>
+                
+                                <div class="form-outline mb-4">
+                                  <label class="form-label fw-bold" for="typePrice">change price:</label>
+                                  <input type="text" placeholder="Enter Amount" id="typeprice" class="form-control form-control-lg" />
+                                  
+                                </div>
+                                <div class="card bg-light  me-5 p-4 shadow-sm">
+
+                                    <div>
+                                    <label for="formimage" class="form-label fw-bold">change Image:</label>
+                                    <input class="form-control form-control-lg mb-3" id="formimage" type="file">
+                                    </div>
+                                    <div>
+                                        <img src="jollofrice.jpeg" alt="jollofrice" style="height: 80px;" class="rounded">
+                                    </div>
+                               </div>
+                
+                            </div>  
+                
+                              
+                        </div>
+                        <div class="modal-footer border-0">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">cancel</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+            </div>
+
+            <!--mealstore edit modal id 1 end-->
+            
+            
+        
+        
+
+
+                
+
+
+        </div>
+
+    </div>
+    
+    
+
+
+
+    
+
+    <script>
+        
+
+        $('.sidebar ul li').on('click', function(){
+            $('.sidebar li.active').removeClass('active');
+            $(this).addClass('active')
+        })
+
+        $('.open-btn').on('click', function(){
+        $('.sidebar').addClass('active');
+        })
+
+        $('.close-btn').on('click', function(){
+        $('.sidebar').removeClass('active');
+        })
+
+
+        
+    </script>
+    <script>
+        
+        
+        $(document).ready(function(){
+          $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+        });
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USER Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/user.css"/>
+</head>
+<body class=" bg-white">
+    <div class="main-container d-flex">
+        <div class="sidebar" id="side_nav">
+            <div class="head-box pb-4 pt-3 px-3 d-flex justify-content-between">
+                <h1 class="fs-5"><span class="bg-white text-dark rounded shadow  px-2 pe-2">BM</span> <span class="text-white ms-auto">Book a Meal</span></h1>
+                 <button class="btn close-btn d-md-none d-block px-1 py-0 text-white"><i class="fa fa-times"></i> </button>
+            </div>
+            <ul class="list-unstyled px-2 ">
+                <li class="active"><a href="user.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa fa-home pe-2" aria-hidden="true"></i>Dashboard</a></li>
+                <li class=""><a href="userprofile.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa fa-user pe-2" aria-hidden="true"></i>profile</a></li>
+                <li class=""><a href="userbook.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa fa-shopping-bag pe-2" aria-hidden="true"></i>Book</a></li>
+                <li class=""><a href="userorders.html" class="text-decoration-none  px-3 py-2 d-block"><i class="fa fa-shopping-cart pe-2" aria-hidden="true"></i>My orders</a></li>
+                <li class=""><a href="userchat.html" class="text-decoration-none px-3 py-2 d-block"><i class="fa fa-comments pe-2" aria-hidden="true"></i>support chat</a></li> 
+
+            </ul>
+
+            <hr class="bg-white">
+
+            <ul class="list-unstyled px-2">
+                
+                
+                <li class=""><a href="#" class="text-decoration-none  px-3 py-2 d-block"><i class="fa fa-sign-out pe-2" aria-hidden="true"></i>logout</a></li>
+
+
+            </ul>
+
+        </div>
+        <div class="content">
+            <div class="d-flex  ">
+                <div class="d-flex  d-md-none d-block">
+                    <h1 class="fs-5 mt-2 mx-2"><span class="bg-danger text-white rounded shadow  px-2 pe-2">BM</span> <span class="text-dark ms-auto">Book a Meal</span></h1>
+                    <button class="btn mx-3 my-2 open-btn"><i class="fa fa-bars" aria-hidden="true"></i>
+                    </button>
+                    
+
+                </div>
+                <div class="ms-auto">
+
+                    <div class="dropdown p-2">
+                        <button class="btn btn-danger dropdown-toggle d-flex" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-user px-2"></i>
+                        <h6>Eze kenneth</h6>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownmenuButton1">
+                        <li><a class="dropdown-item" href="userprofile.html">profile</a></li>
+                        
+                        </ul>
+                    </div>
+                </div>
+          </div>
+            
+            
+            
+
+                <div class="container-fluid">
+                
+                    <div class="container py-3 text-center">
+                        <h1 class="fw-bold">Dashboard</h1>
+                    </div>
+                    <div class="container py-3 text-center">
+                        <h1 class="fw-bold">welcome Eze kenneth</h1>
+                    </div>
+                
+                    <div class="row mx-auto ">
+                        <div class="col-md-6 col-lg-4 ">
+                            <div class="card text-center border-0 m-1 shadow-lg p-3">
+                                <div>
+                                    <h3 class="fs-2 fw-bold">#45000</h3>
+                                    <h5 class="fw-1 fs-5 ">Balance</h5>
+                                </div>
+                                <div class="bg-dark p-5 fs-1 fw-1 rounded">
+                                    
+                                   <i class="fa fa-money fs-1 text-white" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 ">
+                            <div class="card text-center border-0 m-1 shadow-lg p-3">
+                                <div>
+                                    <h3 class="fs-2 fw-bold">#20000</h3>
+                                    <h5 class="fw-1 fs-5 ">Amount Spent</h5>
+                                </div>
+                                <div class="bg-dark p-5 fs-1 fw-1 rounded">
+                                    
+                                   <i class="fa fa-money fa-5x fs-1 text-white" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 ">
+                            <div class="card text-center border-0 m-1 shadow-lg p-3">
+                                <div>
+                                    <h3 class="fs-2 fw-bold">15</h3>
+                                    <h5 class="fw-1 fs-5 ">Total booked</h5>
+                                </div>
+                                <div class="bg-dark p-5 fs-1 fw-1 rounded">
+                                    
+                                   <i class="fa fa-gift fa-5x fs-1 text-white" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-6 col-lg-4 ">
+                            <div class="card text-center border-0 m-1 shadow-lg p-3">
+                                <div>
+                                    <h3 class="fs-2 fw-bold">4</h3>
+                                    <h5 class=" fs-5 ">Active booked</h5>
+                                </div>
+                                <div class="bg-dark p-5 fs-1 fw-1 rounded">
+                                    
+                                   <i class="fa fa-gift fs-1 text-white" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 col-lg-4 ">
+                            <div class="card text-center border-0 rounded-pill m-1 shadow-lg p-3 my-5">
+                                <div>
+                                    <button class="btn btn-outline-danger fs-4 fw-bold rounded-pill"><i class="fa fa-plus" aria-hidden="true"></i>ADD Money</button>
+                                </div>
+                            </div>
+                        </div>
+                    
+
+
+
+                    </div>
+
+               </div>
+
+
+        </div>
+
+    </div>
+    
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        
+
+        $('.sidebar ul li').on('click', function(){
+            $('.sidebar li.active').removeClass('active');
+            $(this).addClass('active')
+        })
+
+        $('.open-btn').on('click', function(){
+        $('.sidebar').addClass('active');
+        })
+
+        $('.close-btn').on('click', function(){
+        $('.sidebar').removeClass('active');
+        })
+
+        
+
+
+        
+    </script>
+</body>
+</html>

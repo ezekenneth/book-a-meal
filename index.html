@@ -13,7 +13,8 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm bg-danger navbar-dark fixed-top">
+        <!--navbar-->
+        <nav class="navbar navbar-expand-sm bg-danger navbar-dark">
             <div class="container-fluid">
                 <img src="fast food.webp" alt="bookameal" class="rounded-pill" width="50px">
         
@@ -26,23 +27,32 @@
                         <li class="nav-item">
                             <button type="button" class="btn btn-danger m-2 text-white" data-bs-toggle="modal" data-bs-target="index.html">HOME</button>                 
                         </li>
-                        <li class="nav-item">
-                            <button type="button" class="btn btn-danger m-2 text-white" data-bs-toggle="modal" data-bs-target="#loginform">ORDER</button>                 
-                        </li>
+                        
                     
                         
                         <li class="nav-item">
                             <button type="button" class="btn btn-danger m-2 text-white" data-bs-toggle="modal" data-bs-target="#loginform">LOGIN</button>                 
                         </li>
                         <li class="nav-item">
-                            <button type="button" class="btn btn-danger m-2 text-white" data-bs-toggle="modal" data-bs-target="#loginform">SIGN UP</button>                 
+                            <button type="button" class="btn btn-danger m-2 text-white" data-bs-toggle="modal" data-bs-target="#registerform">SIGN UP</button>                 
                         </li>
+                        <li class="nav-item">
+                            <div>
+                                <a href="#aboutus1"> <button type="button" class="btn btn-danger m-2 text-white">ABOUT US</button> </a>  
+                            </div>             
+                        </li>
+                        <li class="nav-item">
+                            
+                              <a href="#contactus1"> <button type="button" class="btn btn-danger m-2 text-white">CONTACT US</button> </a>                
+                            
+                        </li>
+                    
 
                     </ul>
                     <FORm>
                         <input class="FORM-CONTROL py-1" type="text" placeholder="search">
                         </input>
-                        <button class="btn btn-success">search</button>
+                        <button class="btn btn-outline-primary rounded-pill searchnavbar" id="navsearch">search</button>
                     </FORm>
 
                 </div>
@@ -51,53 +61,347 @@
             
         </nav>
 
-        <!--login form-->
+        <!--login modal form-->
         <div id="loginform" class="modal">
-         <div class="modal-dialog modal-md">
-            <div class="modal-content">
-             <form class="modal-content animate" method="post">
-              <div class="loginimgcontainer mb-4">
-                 <img src="avatar.jpeg" alt="loginavatar" class="rounded-pill" width="150px">
-              </div>
-              <div class="container-fluid mb-4">
-                
-                <label>username:</label><br>
-                <input class="container-fluid" type="email" placeholder="enter your email">
+            <div class="modal-dialog modal-md">
+               <div class="modal-content">
+                <form class="modal-content animate" method="post">
+                   <!--login header-->
+                       <div class="modal-header">
+                          <div class="modal-title ms-auto">
+                            <h4 class="modal-title">LOGIN</h4>
+                          </div>
+                       
+                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                       </div>
+                       
+                         
+                        <div class="loginimgcontainer mx-auto pt-4">
+                            
+                           <img src="avatar.jpeg" alt="loginavatar" class="rounded-pill" width="150px">
+                       </div>
+                   <div class="form-group mx-5 mt-3">
+                       <div class="form-group">
+                   
+                            <label><b>username:</b></label><br>
+                            <input class="form-control" type="email" placeholder="enter your email">
+   
+                       </div>
+                       <div class="form-group my-3">
+                   
+                            <label for="loginpwd"><b>password:</b></label><br>
+                           <input id="loginpwd" class="form-control" type="password" placeholder="enter your password">
+   
+                       </div>
+                       <div class="form-group">
+                           <input class="form-check-input" type="checkbox" name="remember me" id="logincheckbox" value="something">
+                           <label for="logincheckbox" class="form-check-label">remember me</label>
+                       </div>
+   
+                       <div class="submitbuton text-center mt-3 mb-5">
+                          <button type="submit" class="btn btn-primary btn-lg text-white container-fluid">Login</button>
+                       </div>
+                       <div class="d-flex mb-5">
+                        
+                            <label for="registerbtn">Need an account? </label>
+                            <a href="#"><button class="btn btn-outline-success btn-sm" id="registerbtn">Register</button></a>
+                          
 
-              </div>
-              <div class="container mb-4">
-                
-                <label>password:</label><br>
-                <input class="container-fluid" type="password" placeholder="enter your password">
-            
-
-              </div>
-              <div>
-                <button type="submit" class="btn btn-primary text-white mb-4 ms-5">SUBMIT</button>
-              </div>
-             </form>
+                         <div class="ms-auto">
+                           <a href="#"><button class="btn btn-outline-danger btn-sm" >forgot password</button></a>
+                         </div>
+                         
+                       </div>
+                   </div>
+                </form>
+               </div>
             </div>
-         </div>
-        </div>
-    </header>
+           </div>
+           <!--login end-->
 
+           <!--register modal form-->
+           <div id="registerform" class="modal">
+            <div class="modal-dialog modal-md">
+               <div class="modal-content ">
+                <form class="modal-content animate" method="post">
+                   <!--register header-->
+                       <div class="modal-header bg-light">
+                          <div class="modal-title ms-auto">
+                            <h4 class="modal-title">REGISTER</h4>
+                          </div>
+                       
+                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                       </div>
+                       
+                         
+                        <div class="registerimgcontainer mx-auto pt-4">
+                            
+                           <img src="avatar.jpeg" alt="loginavatar" class="rounded-pill" width="150px">
+                       </div>
+                   <div class="form-group mx-5 mt-3">
+                        <div class="form-group my-3">
+                   
+                           <label><b>Full Name:</b></label><br>
+                           <input class="form-control" type="text" placeholder="Enter your username">
+
+                        </div>
+                        <div class="form-group">
+                   
+                           <label><b>Email:</b></label><br>
+                           <input class="form-control" type="email" placeholder="Enter your email">
+                        
+
+                       </div>
+                       
+                       <div class="form-group my-3">
+                   
+                            <label for="loginpwd"><b>Password:</b></label><br>
+                           <input id="registerpwd" class="form-control" type="password" placeholder="Enter password">
+   
+                       </div>
+                       <div class="form-group my-4">
+                           <input class="form-check-input" type="checkbox" name="remember me" id="logincheckbox" value="something">
+                           <label for="logincheckbox" class="form-check-label">Remember me</label>
+                       </div>
+   
+                       <div class="text-center mt-4 mb-5 registerbuton">
+                          <button type="submit" class="btn btn-primary btn-lg text-white container-fluid">REGISTER</button>
+                    
+                       </div>
+                       <div class="form-group d-flex mb-5">
+                           
+                              <label class="text-left" for="loginbtn">Already have an account? </label>
+                              <a href="#"><button class="btn btn-outline-success btn-sm" id="loginbtn" >Login</button></a>
+                            
+
+                            <div class="ms-auto ms-auto">
+                             <a href="#"><button class="btn btn-outline-danger btn-sm" >forgot password</button></a>
+                            </div>
+                           
+                        </div>
+
+                   </div>
+                </form>
+               </div>
+            </div>
+           </div>
+           <!--login end-->
+
+        
+        
+    
+    </header>
     <main>
 
-        <!--homepage carousel-->
-
-        <div class="carousel slide" id="homepagecarousel" data-bs-ride="carousel">
-           <div class="carousel indicators">
-             <button type="button" class="active" data-bs-slide-to="0" data-bs-target="#homepagecarousel"></button>
-
-           </div>  
-
-
+        <!--homepage search-->
+        <div class="container-fluid search">
+         <form class="form-group mt-5">
+            
+            <input class="form-control mx-auto mt-5" type="text" placeholder="Search for your favourite meal">
+            <button class="btn btn-primary my-3 btn-lg" type="submit">Search</button>
+         </form>
         </div>
+        <!--food and drink list-->
+        <div class="container">
+            <!--food list-->
+              <div class="container py-3 text-center">
+                <h1 class="fw-bold"> Choose your favourite meal</h1>
+              </div>
+          
+            <div class="row mx-auto">
+                <div class="col-sm-6 col-md-3">
+                   <div class="card text-center m-1">
+                        <img src="jollofrice.jpeg" alt="jollofrice" class="rounded-pill mx-auto " height="70%" width="70%">
+                        <h5>Jollof Rice</h5>
+                        <p class="price"><strong>#600</strong></p>
+                        <p><button class="btn btn-danger">Add to cart</button></p>
+                   </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                   <div class="card text-center m-1">
+                        <img src="friedrice.gif" alt="friedrice" class="rounded-pill mx-auto " height="70%" width="70%">
+                        <h5>Fried Rice</h5>
+                        <p class="price"><strong>#600</strong></p>
+                        <p><button class="btn btn-danger">Add to cart</button></p>
+                   </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card text-center m-1">
+                        <img src="egusisoup.jpeg" alt="egusisoup" class="rounded-pill mx-auto " height="70%" width="70%">
+                        <h5>Egusi soup</h5>
+                        <p class="price"><strong>#800</strong></p>
+                        <p><button class="btn btn-danger">Add to cart</button></p>
+                   </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                   <div class="card text-center m-1">
+                        <img src="edikaikong.jpeg" alt="edikaikong" class="rounded-pill mx-auto " height="70%" width="70%">
+                        <h5>Edikaikong</h5>
+                        <p class="price"><strong>#800</strong></p>
+                        <p><button class="btn btn-danger">Add to cart</button></p>
+                   </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+
+                  <div class="card text-center m-1">
+                        <img src="moimoi.jpeg" alt="moimoi" class="rounded-pill mx-auto " height="70%" width="70%">
+                        <h5>Moi moi</h5>
+                        <p class="price"><strong>#400</strong></p>
+                        <p><button class="btn btn-danger">Add to cart</button></p>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-3 ">
+                    <div class="card text-center m-1">
+                        <img src="nkwobi.jpeg" alt="nkwobi" class="rounded-pill mx-auto " height="70%" width="70%">
+                        <h5>Nkwobi</h5>
+                        <p class="price"><strong>#2000</strong></p>
+                        <p><button class="btn btn-danger">Add to cart</button></p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 ">
+                    <div class="card text-center m-1">
+                        <img src="ofe-nsala.jpeg" alt="ofe-nsala" class="rounded-pill mx-auto " height="70%" width="70%">
+                        <h5>Ofe nsala</h5>
+                        <p class="price"><strong>#600</strong></p>
+                        <p><button class="btn btn-danger">Add to cart</button></p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card text-center m-1">
+                        <img src="Fried-Yam.jpeg" alt="Fried-Yam" class="rounded-pill mx-auto " height="70%" width="70%">
+                        <h5>Fried Yam</h5>
+                        <p class="price"><strong>#500</strong></p>
+                        <p><button class="btn btn-danger">Add to cart</button></p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card text-center m-1">
+                        <img src="Goat-meat-pepper-soup.jpeg" alt="Goat-meat-pepper-soup" class="rounded-pill mx-auto " height="70%" width="70%">
+                        <h5>Goat Meat pepper soup</h5>
+                        <p class="price"><strong>#1500</strong></p>
+                        <p><button class="btn btn-danger">Add to cart</button></p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card text-center m-1">
+                        <img src="supagheti.jpeg" alt="supagheti" class="rounded-pill mx-auto " height="70%" width="70%">
+                        <h5>supagheti</h5>
+                        <p class="price"><strong>#500</strong></p>
+                        <p><button class="btn btn-danger">Add to cart</button></p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card text-center m-1">
+                        <img src="ChickenSalad.jpeg" alt="ChickenSalad" class="rounded-pill mx-auto " height="70%" width="70%">
+                        <h5>Chicken salad</h5>
+                        <p class="price"><strong>#1500</strong></p>
+                        <p><button class="btn btn-danger">Add to cart</button></p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card text-center m-1">
+                        <img src="coconutrice.jpeg" alt="coconutrice" class="rounded-pill mx-auto " height="70%" width="70%">
+                        <h5>Coconut Rice</h5>
+                        <p class="price"><strong>#800</strong></p>
+                        <p><button class="btn btn-danger">Add to cart</button></p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card text-center m-1">
+                        <img src="5alive.jpeg" alt="5alive" class="rounded-pill mx-auto " height="70%" width="70%">
+                        <h5>5alive</h5>
+                        <p class="price"><strong>#800</strong></p>
+                        <p><button class="btn btn-danger">Add to cart</button></p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card text-center m-1">
+                        <img src="CHIVITA.jpeg" alt="CHIVITA" class="rounded-pill mx-auto " height="70%" width="70%">
+                        <h5>Chivita</h5>
+                        <p class="price"><strong>#800</strong></p>
+                        <p><button class="btn btn-danger">Add to cart</button></p>
+                    </div>
+                </div>
+
+         </div>
+
+            
+    
+        </div>
+
 
     </main>
 
     
     <footer>
+        <!--about us section-->
+        <div id="aboutus1" class="mt-4 p-5 bg-dark text-white" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+            <H2>ABOUT US</H2>
+            We are a 24-hour delivery and take out restaurant located in Lagos, Nigeria. We have a broad menu that includes breakfast, small bites, grilled food, African and inter-continental dishes.
+
+Our 24-hour kitchen prepares top quality food and we deliver to your door expeditiously.
+
+So one of our main goals is to make it easier for customers to get access to delicious freshly prepared meals quickly and at any time of the day. So once an order is placed, we make sure they get delivered instantly.
+
+Our prices are highly competitive and very affordable. We can proudly boast of our food prices being one of the lowest in the area.
+
+Also, there is no minimum amount to place an order. If you need one plate or need us for a big event, we got you covered.
+
+One thing we do assure our customers is top-notch customer service at all times.
+
+So please join the fun, order your tasty and hot food today and watch us do our Magic.
+
+
+
+        </div>
+
+        <!--contact us-->
+
+        <div 
+       id="contactus1" class="container-fluid p-5 bg-dark text-white text-center contactus" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+
+            <h2>CONTACT US</h2>
+            <img src="contactus.jpeg" alt="contact us" class="rounded-pill my-4">
+                <div class="container-fluid p-5">
+                    <div class="row">
+                        <div class="col-sm-4 pb-5">
+                            
+                            <img src="addressavatar.jpeg" alt="contact us" class="rounded-pill my-5" height="30%" width="20%">
+                            <h5>No.5 ik peter street</h5>
+                        </div>
+                        <div class="col-sm-4 pb-5">
+                        
+                            <img src="callavatar.jpeg" alt="contact us" class="rounded-pill my-5" height="30%" width="20%">
+                            <h5>+2349035779656</h5>
+
+                        </div>
+                        <div class="col-sm-4 pb-5">
+                            <img src="emailavatar.jpeg" alt="contact us" class="rounded-pill my-5" height="30%" width="20%">
+                            <h5>Ezekenny91@gmail.com</h5>
+                        
+                        </div>
+
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+                 
+            
+        
+            
+            
+
+           
+             
+           
+
+        </div>
 
 
 
@@ -105,6 +409,6 @@
     </footer>
 
 
-
+    
 </body>
 </html>
